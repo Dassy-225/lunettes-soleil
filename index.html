@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f4ed">
+  <meta name="description" content="Des lunettes de soleil bien dessinées, faites pour suivre la lumière.">
+  <title>SOLEIL STUDIO — Lunettes pour jours lumineux</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="announcement">LIVRAISON OFFERTE DÈS 100 € <span aria-hidden="true">✳</span> 30 JOURS POUR CHANGER D’AVIS</div>
+
+  <header class="site-header">
+    <a class="wordmark" href="#accueil" aria-label="Soleil Studio, accueil">SOLEIL<span>®</span></a>
+    <nav class="main-nav" aria-label="Navigation principale">
+      <a href="#collection">La collection</a>
+      <a href="#histoire">Notre approche</a>
+    </nav>
+    <button class="cart-trigger" type="button" aria-label="Ouvrir le panier, 0 article" aria-controls="cart-panel">
+      Panier <span class="cart-count" aria-live="polite">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="sun-mark" aria-hidden="true">✳</span> FAIT POUR LES BEAUX JOURS</p>
+        <h1>Le soleil<br>vous va <span>bien.</span></h1>
+        <p class="hero-description">Des lunettes bien dessinées, des verres sérieux, et l’envie de rester dehors un peu plus longtemps.</p>
+        <a class="button button-dark" href="#collection">Voir la collection <span aria-hidden="true">↘</span></a>
+        <div class="hero-note"><span class="note-line"></span> Modèles pensés à Paris. Prêts pour partout.</div>
+      </div>
+      <div class="hero-art" role="img" aria-label="Portrait au soleil portant des lunettes de soleil">
+        <div class="hero-sticker">SOLEIL<br>TOUJOURS<br>EN FACE <span>↗</span></div>
+        <span class="image-caption">ÉTÉ SANS MODE D’EMPLOI — 01/06</span>
+      </div>
+    </section>
+
+    <section class="trust-strip" id="histoire" aria-label="Nos engagements">
+      <p>UV400 <span>●</span> Protection totale</p>
+      <p>Expédié sous 48 h <span>●</span> Sans prise de tête</p>
+      <p>Fait pour durer <span>●</span> Pas juste pour la photo</p>
+    </section>
+
+    <section class="collection section-wrap" id="collection">
+      <div class="collection-heading">
+        <div>
+          <p class="eyebrow">VOTRE NOUVEAU SOLEIL</p>
+          <h2>La collection <span>qui voit loin.</span></h2>
+        </div>
+        <label class="search-box">
+          <span class="sr-only">Rechercher un modèle</span>
+          <span aria-hidden="true">⌕</span>
+          <input class="search-input" type="search" placeholder="Chercher un modèle" autocomplete="off">
+        </label>
+      </div>
+
+      <div class="collection-tools">
+        <div class="filter-list" role="group" aria-label="Filtrer par forme">
+          <button class="filter-button is-active" type="button" data-filter="tous" aria-pressed="true">Tout voir</button>
+          <button class="filter-button" type="button" data-filter="classique" aria-pressed="false">Classiques</button>
+          <button class="filter-button" type="button" data-filter="audacieux" aria-pressed="false">Audacieux</button>
+          <button class="filter-button" type="button" data-filter="sport" aria-pressed="false">Sport</button>
+        </div>
+        <p class="result-count" aria-live="polite"></p>
+      </div>
+
+      <div class="product-grid" aria-live="polite"></div>
+      <p class="empty-state" hidden>Aucun modèle ne correspond à votre recherche. Essayez un autre nom.</p>
+    </section>
+
+    <section class="closing-banner">
+      <p class="eyebrow">ON SORT ?</p>
+      <h2>Les prévisions sont bonnes.</h2>
+      <a href="#collection" class="text-link">Trouver sa paire <span aria-hidden="true">↗</span></a>
+      <span class="banner-sun" aria-hidden="true">✳</span>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="wordmark" href="#accueil">SOLEIL<span>®</span></a>
+    <p>De bonnes lunettes. Dehors, souvent.</p>
+    <span>© SOLEIL STUDIO 2026</span>
+  </footer>
+
+  <div class="cart-backdrop" hidden></div>
+  <aside class="cart-panel" id="cart-panel" aria-label="Votre panier" aria-hidden="true" inert>
+    <div class="cart-header">
+      <div><p class="eyebrow">C’EST BIEN PARTI</p><h2>Votre panier <span class="cart-heading-count">(0)</span></h2></div>
+      <button class="cart-close" type="button" aria-label="Fermer le panier">×</button>
+    </div>
+    <div class="cart-items"></div>
+    <p class="cart-empty">Votre panier prend le soleil. Ajoutez-lui une paire.</p>
+    <div class="cart-footer" hidden>
+      <div class="subtotal"><span>Sous-total</span><strong class="cart-total">0 €</strong></div>
+      <p class="shipping-note">Livraison calculée à l’étape suivante.</p>
+      <button class="button button-dark checkout-button" type="button">Continuer ma commande <span aria-hidden="true">→</span></button>
+      <p class="checkout-message" role="status"></p>
+    </div>
+  </aside>
+  <div class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
